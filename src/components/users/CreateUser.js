@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createUser } from '../../actions';
-import PetMatchForm from '../PetMatchForm';
+import UserForm from './UserForm';
 
 class CreateUser extends Component {
     onSubmit = formValues => {
@@ -12,7 +12,7 @@ class CreateUser extends Component {
         return (
             <div>
                 <h3>Create User</h3>
-                <PetMatchForm onSubmit={this.onSubmit} />
+                <UserForm onSubmit={this.onSubmit} />
             </div>
         );
     }

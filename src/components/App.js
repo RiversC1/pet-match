@@ -4,6 +4,7 @@ import PetList from '../components/pets/PetList';
 import Header from './Header';
 import history from '../history';
 import CreateUser from './users/CreateUser';
+import CreatePet from './pets/CreatePet';
 
 class App extends Component {
     render() {
@@ -15,6 +16,7 @@ class App extends Component {
                         <Switch>
                             <Route path="/" exact component={PetList} />
                             <Route path="/sign-up" exact component={CreateUser} />
+                            <Route path="/new-pet" exact component={CreatePet} />
                         </Switch>
                     </div>
                 </Router>
