@@ -8,6 +8,21 @@ class PetList extends Component {
         this.props.fetchPets();
     }
 
+    renderAdmin = pet => {
+        if (pet.Owner === this.props.currentUserId){
+            return (
+                <div className="right floated content">
+                    <Link to={`/pets/edit/${pet.PetId}`} className="ui button primary">
+                        Edit
+                    </Link>
+                    <Link to={`/pets/delete/${pet.PetId}`} className="ui button negative">
+                        Delete
+                    </Link>
+                </div>
+            );
+        }
+    }
+
     renderCreate = () => {
         if (this.props.isSignedIn) {
             return (
@@ -25,6 +40,7 @@ class PetList extends Component {
             return (
                 <div className="ui relaxed list" key={index}>
                     <div className="item">
+                        {this.renderAdmin(pet)}
                         <img className="ui small rounded image" src={pet.Photo} alt={pet.Name}></img>
                         <div className="content">
                             <div className="header">{pet.Name}</div>
@@ -49,7 +65,7 @@ class PetList extends Component {
 
 const maptStateToProps = state => {
     return { pets: Object.values(state.pets), 
-             currentUserId: state.auth.Id,
+             currentUserId: state.auth.userId,
              isSignedIn: state.auth.isSignedIn
         };
 }

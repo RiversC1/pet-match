@@ -58,12 +58,14 @@ export const editPet = (id, formValues) => async dispatch => {
     const response = await petmatch.patch(`/Pets/${id}.json`, formValues);
 
     dispatch({ type: EDIT_PET, payload: response.data });
+    history.push('/');
 }
 
 export const deletePet = id => async dispatch => {
     await petmatch.delete(`/Pets/${id}.json`);
 
     dispatch({ type: DELETE_PET, payload: id });
+    history.push('/');
 }
 
 export const createUser = formValues => async dispatch => {
