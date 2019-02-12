@@ -10,21 +10,30 @@ import EditPet from './pets/EditPet';
 class App extends Component {
     render() {
         return (
-            <div className="ui container">
+            
+           
+            
                 <Router history={history}>
+                <div className="contenedor1"  >
                     <div>
                         <Header />
                         <Switch>
-                            <Route path="/" exact component={PetList} />
+                          <Route path="/" exact component={PetList} />
                             <Route path="/sign-up" exact component={CreateUser} />
                             <Route path="/new-pet" exact component={CreatePet} />
                             <Route path="/pets/edit/:id" exact component={EditPet} />
                         </Switch>
                     </div>
+                    </div>
                 </Router>
-            </div>
+            
+            
         )
     }
 };
+
+
+
+
 
 export default App;

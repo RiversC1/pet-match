@@ -3,7 +3,7 @@ import React from 'react';
 const PetPic = (props) => {
     const { pictureUrl } = props;
     return (
-        <img className="ui medium image" src={pictureUrl} alt=""/>
+       <div className=""> <img className="ui medium image" src={pictureUrl} alt=""/></div>
     );   
 }
 

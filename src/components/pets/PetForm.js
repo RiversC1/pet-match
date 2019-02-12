@@ -30,6 +30,7 @@ class PetForm extends Component {
 
     render() {
         return (
+            <div className="formsize">
             <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form error">
                 <Field name="Name"
                     component={this.renderInput}
@@ -49,8 +50,9 @@ class PetForm extends Component {
                     label="About: " />
                 <Field name="Photo"
                     component={FileField} />
-                <button className="ui button primary">Add a pet</button>
+                <div className="btn"><button className="ui positive basic button">Add a pet</button></div>
             </form>
+            </div>
         )
     }
 }

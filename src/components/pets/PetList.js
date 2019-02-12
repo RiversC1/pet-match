@@ -27,7 +27,7 @@ class PetList extends Component {
         if (this.props.isSignedIn) {
             return (
                 <div style={{ textAlign: 'right' }}>
-                    <Link to="/new-pet" className="ui button primary">
+                    <Link to="/new-pet" className="ui positive basic button">
                        Add a pet
                     </Link>
                 </div>
@@ -38,11 +38,11 @@ class PetList extends Component {
     renderList = () => {
         return this.props.pets.map((pet, index) => {
             return (
-                <div className="ui relaxed list" key={index}>
-                    <div className="item">
+                <div className="card" key={index}>
+                    <div className="cont-card">
                         {this.renderAdmin(pet)}
-                        <img className="ui small rounded image" src={pet.Photo} alt={pet.Name}></img>
-                        <div className="content">
+                        <img className="img-card" src={pet.Photo} alt={pet.Name}></img>
+                        <div className="texto-card">
                             <div className="header">{pet.Name}</div>
                             <div className="description">{pet.About}</div>
                         </div>
