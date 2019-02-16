@@ -6,11 +6,11 @@ export default ( state = {}, action ) => {
         case FETCH_PETS:
             return { ...state, ..._.mapKeys(action.payload, 'Name') };
         case CREATE_PET:
-            return { ...state, [action.payload.Owner]: action.payload };
+            return { ...state, ...action.payload };
         case FETCH_PET:
-            return { ...state, [action.payload.Owner]: action.payload };
+            return { ...state, ...action.payload };
         case EDIT_PET: 
-            return { ...state, [action.payload.Owner]: action.payload };
+            return { ...state, ...action.payload };
         case DELETE_PET:
             return _.omit(state, action.payload);
         default:

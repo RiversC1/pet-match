@@ -12,10 +12,10 @@ class PetList extends Component {
         if (pet.Owner === this.props.currentUserId){
             return (
                 <div className="right floated content">
-                    <Link to={`/pets/edit/${pet.PetId}`} className="ui button primary">
+                    <Link to={`/pets/edit/${pet.Name}`} className="ui button primary">
                         Edit
                     </Link>
-                    <Link to={`/pets/delete/${pet.PetId}`} className="ui button negative">
+                    <Link to={`/pets/delete/${pet.Name}`} className="ui button negative">
                         Delete
                     </Link>
                 </div>

@@ -49,7 +49,7 @@ class PetForm extends Component {
                     label="About: " />
                 <Field name="Photo"
                     component={FileField} />
-                <button className="ui button primary">Add a pet</button>
+                <button className="ui button primary">Submit</button>
             </form>
         )
     }

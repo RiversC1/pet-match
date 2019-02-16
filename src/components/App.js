@@ -6,6 +6,7 @@ import history from '../history';
 import CreateUser from './users/CreateUser';
 import CreatePet from './pets/CreatePet';
 import EditPet from './pets/EditPet';
+import StreamDelete from './pets/DeletePet';
 
 class App extends Component {
     render() {
@@ -19,6 +20,7 @@ class App extends Component {
                             <Route path="/sign-up" exact component={CreateUser} />
                             <Route path="/new-pet" exact component={CreatePet} />
                             <Route path="/pets/edit/:id" exact component={EditPet} />
+                            <Route path="/pets/delete/:id" exact component={StreamDelete} />
                         </Switch>
                     </div>
                 </Router>
