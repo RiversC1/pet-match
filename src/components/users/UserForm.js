@@ -33,6 +33,7 @@ class PetMatchForm extends Component {
         'Invalid email address' : undefined
 
         return (
+            <div className="formsize">
             <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="ui form error">
                <Field name="Name"
                       component={this.renderInput}
@@ -44,9 +45,10 @@ class PetMatchForm extends Component {
                <Field name="Password"
                       type="password"
                       component={this.renderInput}
-                      label="Enter Password: " />  
-                <button className="ui button primary">Sign Up</button>  
+                      label="Enter Password1: " />  
+                <div className="btn"><button className="ui positive basic button">Sign Up</button>  </div>
             </form>
+            </div>
         )
     }
 }

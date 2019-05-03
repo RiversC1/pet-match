@@ -39,14 +39,14 @@ class GoogleAuth extends Component {
             return null;
         } else if (this.props.isSignedIn) {
             return (
-                <button onClick={this.onSignOutClick} className="ui red google button">
+                <button onClick={this.onSignOutClick} className="ui inverted red button">
                     <i className="google icon" />
                     Sign Out
                 </button>
             )
         } else {
             return (
-                <button onClick={this.onSignInClick} className="ui red google button">
+                <button onClick={this.onSignInClick} className="ui inverted red button">
                    <i className="google icon" />
                    Sign in
                 </button>

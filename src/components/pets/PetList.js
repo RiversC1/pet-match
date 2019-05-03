@@ -9,6 +9,7 @@ class PetList extends Component {
     this.props.fetchPets();
   };
 
+<<<<<<< HEAD
   renderAdmin = pet => {
     if (pet.Owner === this.props.currentUserId) {
       return (
@@ -21,9 +22,22 @@ class PetList extends Component {
           </Link>
         </div>
       );
+=======
+    renderCreate = () => {
+        if (this.props.isSignedIn) {
+            return (
+                <div style={{ textAlign: 'right' }}>
+                    <Link to="/new-pet" className="ui positive basic button">
+                       Add a pet
+                    </Link>
+                </div>
+            );
+        }
+>>>>>>> b26ec63e2565cf696528fb9f66ca79eaaca6354f
     }
   };
 
+<<<<<<< HEAD
   renderCreate = () => {
     if (this.props.isSignedIn) {
       return (
@@ -33,6 +47,23 @@ class PetList extends Component {
           </Link>
         </div>
       );
+=======
+    renderList = () => {
+        return this.props.pets.map((pet, index) => {
+            return (
+                <div className="card" key={index}>
+                    <div className="cont-card">
+                        {this.renderAdmin(pet)}
+                        <img className="img-card" src={pet.Photo} alt={pet.Name}></img>
+                        <div className="texto-card">
+                            <div className="header">{pet.Name}</div>
+                            <div className="description">{pet.About}</div>
+                        </div>
+                    </div>
+                </div>
+            );
+        })
+>>>>>>> b26ec63e2565cf696528fb9f66ca79eaaca6354f
     }
   };
 

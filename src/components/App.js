@@ -35,8 +35,11 @@ class App extends Component {
 
     render() {
         return (
-            <div className="ui container">
+            
+           
+            
                 <Router history={history}>
+                <div className="contenedor1"  >
                     <div>
                         
                         {this.state.user ? (
@@ -44,7 +47,11 @@ class App extends Component {
                         
                         ):(<Login/>)}
                         <Switch>
+<<<<<<< HEAD
                             {/* <Route path="/" exact component={PetList} /> */}
+=======
+                          <Route path="/" exact component={PetList} />
+>>>>>>> b26ec63e2565cf696528fb9f66ca79eaaca6354f
                             <Route path="/sign-up" exact component={CreateUser} />
                             <Route path="/sign-in" exact component={Login} />
                             <Route path="/new-pet" exact component={CreatePet} />
@@ -52,10 +59,16 @@ class App extends Component {
                             <Route path="/pets/delete/:id" exact component={StreamDelete} />
                         </Switch>
                     </div>
+                    </div>
                 </Router>
-            </div>
+            
+            
         )
     }
 };
+
+
+
+
 
 export default App;
